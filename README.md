@@ -6,11 +6,11 @@ Projeto (esta sendo) desenvolvido para o aprendizado referente ao uso da ferrame
 
 
 
-## Diagrama de Classes v1
+## Diagrama de Classes
 
-![](/home/eduardo/Documents/workspace-spring-tool/TaskManager/docs/DiagramaClasse-v1.png)
+Primeira versão do diagrama de classes
 
-
+![](https://github.com/eduardocvaz/TaskManager/blob/main/docs/DiagramaClasse-v1.png?raw=true)
 
 ## Documentação
 
