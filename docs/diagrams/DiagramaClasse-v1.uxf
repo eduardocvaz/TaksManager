@@ -1,0 +1,35 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>510</x><y>270</y><w>150</w><h>110</h></coordinates><panel_attributes>Tarefa
+--
+-id: Long
+-titulo: String
+-descricao: String
+-responsavel: Usuario
+-prioridade: int
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>270</y><w>110</w><h>70</h></coordinates><panel_attributes>Usuario
+--
+-id: Long
+- nome: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLInterface</id><coordinates><x>690</x><y>80</y><w>100</w><h>80</h></coordinates><panel_attributes>ITarefaService
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>220</y><w>150</w><h>110</h></coordinates><panel_attributes>TarefaService
+--
+--
+addTarefa();
+remTarefa();
+uptdateTarefa();
+listTarefas();
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>130</y><w>30</w><h>110</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>240</y><w>80</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>10;30;10;10;60;10</additional_attributes></element><element><id>UMLInterface</id><coordinates><x>700</x><y>420</y><w>80</w><h>80</h></coordinates><panel_attributes>ITarefaDAO
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>320</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>220</y><w>150</w><h>110</h></coordinates><panel_attributes>UsuarioService
+--
+--
+addUsuario();
+remUsuario();
+uptdateUsuario();
+listUsuario();
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLInterface</id><coordinates><x>210</x><y>90</y><w>100</w><h>80</h></coordinates><panel_attributes>IUsuarioService
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>140</y><w>30</w><h>100</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>230</y><w>120</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>100;40;100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>330</y><w>200</w><h>110</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1</panel_attributes><additional_attributes>10;10;10;90;170;90;170;50</additional_attributes></element><element><id>UMLInterface</id><coordinates><x>220</x><y>420</y><w>80</w><h>80</h></coordinates><panel_attributes>ITarefaDAO
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>320</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element></diagram>
