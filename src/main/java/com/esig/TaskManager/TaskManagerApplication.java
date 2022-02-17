@@ -1,5 +1,8 @@
 package com.esig.TaskManager;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -24,16 +27,26 @@ public class TaskManagerApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		Usuario user1 = new Usuario(1L,"Eduardo");
-		Usuario user2 = new Usuario(2L,"Mirna");
-		Tarefa tar1 = new Tarefa(1L,"Fazer Teste", 1, user1);
-		Tarefa tar2 = new Tarefa(2L,"Fazer Banco de Dados", 2, user2);
-		
-		usuarioRepository.save(user1);
-		usuarioRepository.save(user2);
-		
-		tarefaRepository.save(tar1);
-		tarefaRepository.save(tar2);
+//		Usuario user1 = new Usuario(null,"Eduardo");
+//		Usuario user2 = new Usuario(null,"Mirna");
+//		Tarefa tar1 = new Tarefa(null,"Fazer Teste", 1, user1);
+//		Tarefa tar2 = new Tarefa(null,"Editar Teste", 1, user1);
+//		Tarefa tar3 = new Tarefa(null,"Fazer Banco de Dados", 2, user2);
+//		Tarefa tar4 = new Tarefa(null,"Editar Banco de Dados", 2, user2);
+//		
+//		user1.setTarefas(Arrays.asList(tar1,tar2));
+//		user2.setTarefas(Arrays.asList(tar2,tar4));
+//		
+//		System.out.println(user1);
+//		
+//		
+//		usuarioRepository.save(user1);
+//		usuarioRepository.save(user2);
+//		
+//		tarefaRepository.save(tar1);
+//		tarefaRepository.save(tar2);
+//		tarefaRepository.save(tar3);
+//		tarefaRepository.save(tar4);
 		
 	}
 

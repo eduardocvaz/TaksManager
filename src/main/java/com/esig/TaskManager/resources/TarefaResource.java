@@ -28,9 +28,16 @@ public class TarefaResource {
 
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Tarefa> findById(@PathVariable Long id) {
-		Tarefa tarefa = tarefaRepository.findById(id);
+		Tarefa tarefa = tarefaRepository.findById(id).get();
 		return ResponseEntity.ok().body(tarefa);
 	}
+	
+//	@PostMapping
+//	public @ResponseBody ResponseEntity<Tarefa> save(Tarefa tarefa) {
+//		tarefaRepository.save(tarefa);
+//	    return ResponseEntity.ok().body(tarefa);
+//	}
+	
 	
 
 }

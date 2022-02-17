@@ -1,31 +1,11 @@
 package com.esig.TaskManager.repositories;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.springframework.stereotype.Component;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.esig.TaskManager.entities.Usuario;
 
-@Component
-public class UsuarioRepository {
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 
-	private Map<Long, Usuario> map = new HashMap<>();
-
-	public void save(Usuario obj) {
-		map.put(obj.getId(), obj);
-	}
-	
-	public Usuario findById(Long id) {
-		return map.get(id);
-		
-	}
-	
-	public List<Usuario> findAll() {
-		return new ArrayList<Usuario>(map.values());
-		
-	}
-	
 }

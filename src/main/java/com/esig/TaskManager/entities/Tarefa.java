@@ -3,20 +3,35 @@ package com.esig.TaskManager.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity	
+@Table(name="produtos")
 public class Tarefa implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
-	
 	private String titulo;
-	
 	private int prioridade;
 	
+	@ManyToOne
+	@JoinColumn(name = "usuario_id")
 	private Usuario responsavel;
 
 	
 	
+	public Tarefa() {
+	}
+
 	public Tarefa(Long id, String titulo, int prioridade, Usuario responsavel) {
 		super();
 		this.id = id;
