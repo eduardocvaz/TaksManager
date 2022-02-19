@@ -16,12 +16,22 @@ import javax.persistence.Table;
 public class Tarefa implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
+	
+	public enum Prioridade {
+		ALTA,MEDIA,BAIXA
+	}
+
+	public enum Status {
+		EM_ANDAMENTO,CONCLUIDA
+	}
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String titulo;
-	private int prioridade;
+	private String descricao;
+	private Prioridade prioridade;
+	private Status status;
 	
 	@ManyToOne
 	@JoinColumn(name = "usuario_id")
@@ -32,12 +42,13 @@ public class Tarefa implements Serializable{
 	public Tarefa() {
 	}
 
-	public Tarefa(Long id, String titulo, int prioridade, Usuario responsavel) {
+	public Tarefa(Long id, String titulo , String descricao, Usuario responsavel) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
-		this.prioridade = prioridade;
+		this.setDescricao(descricao);
 		this.responsavel = responsavel;
+		this.status = Status.EM_ANDAMENTO;
 	}
 
 	public Long getId() {
@@ -56,11 +67,11 @@ public class Tarefa implements Serializable{
 		this.titulo = titulo;
 	}
 
-	public int getPrioridade() {
+	public Prioridade getPrioridade() {
 		return prioridade;
 	}
 
-	public void setPrioridade(int prioridade) {
+	public void setPrioridade(Prioridade prioridade) {
 		this.prioridade = prioridade;
 	}
 
@@ -87,6 +98,22 @@ public class Tarefa implements Serializable{
 			return false;
 		Tarefa other = (Tarefa) obj;
 		return Objects.equals(id, other.id);
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 	
 	
