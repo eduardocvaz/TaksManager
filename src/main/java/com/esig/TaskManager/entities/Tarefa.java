@@ -1,6 +1,7 @@
 package com.esig.TaskManager.entities;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -10,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity	
 @Table(name="produtos")
@@ -32,6 +35,8 @@ public class Tarefa implements Serializable{
 	private String descricao;
 	private Prioridade prioridade;
 	private Status status;
+	@JsonFormat(pattern="yyyy-MM-dd")
+	private Date deadline;
 	
 	@ManyToOne
 	@JoinColumn(name = "usuario_id")
@@ -115,6 +120,15 @@ public class Tarefa implements Serializable{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+
+	public Date getDeadline() {
+		return deadline;
+	}
+
+	public void setDeadline(Date deadline) {
+		this.deadline = deadline;
+	}
+	
 	
 	
 	
